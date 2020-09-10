@@ -1,0 +1,26 @@
+{
+  "name": "triangle",
+  "version": "1.0.0",
+  "description": "Define a triangle on three sides",
+  "main": "s.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimaxSaab/triangle.git"
+  },
+  "keywords": [
+    "js",
+    "javascript"
+  ],
+  "author": "netOfNets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimaxSaab/triangle/issues"
+  },
+  "homepage": "https://github.com/SimaxSaab/triangle#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}

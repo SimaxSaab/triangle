@@ -15,16 +15,19 @@ document.querySelector('.def').addEventListener('click', def);
   
 
   function def() {
-    let f;
+    let f1, f2, f3;
     wA = wB = wC = '';
     aN = parseFloat(a.value);
     bN = parseFloat(b.value);
     cN = parseFloat(c.value);
     console.log(aN);
-    f = (isNaN(aN) && (wA = w1)) || (aN < 0 && (wA = w2)) || (aN < e && (wA = w3)) && true;
+    f1 = !((isNaN(aN) && (wA = w1)) || (aN < 0 && (wA = w2)) || (aN < e && (wA = w3))) && true;
     x.innerHTML = wA;
-    f = (isNaN(bN) && (wB = w1)) || (bN < 0 && (wB = w2)) || (bN < e && (wB = w3)) && true;
+    f2 = !((isNaN(bN) && (wB = w1)) || (bN < 0 && (wB = w2)) || (bN < e && (wB = w3))) && true;
     y.innerHTML = wB;
-    f = (isNaN(cN) && (wC = w1)) || (cN < 0 && (wC = w2)) || (cN < e && (wC = w3)) && true;
+    f3 = (!(isNaN(cN) && (wC = w1)) || (cN < 0 && (wC = w2)) || (cN < e && (wC = w3))) && true;
     z.innerHTML = wC;
+    return f1 && f2 && f3;
   }
+
+  
