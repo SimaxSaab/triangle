@@ -67,12 +67,11 @@ function defineEquilateralTriangle() {
 }
 
 function defineRightTriangle() {
-  console.log('1');
   // if (aN * aN + bN * bN == cN * cN || aN * aN + cN * cN == bN * bN || bN * bN + cN * cN == aN * aN) {
   //   r.innerHTML = r2;
   // }
     // return (aN * aN + bN * bN == cN * cN || aN * aN + cN * cN == bN * bN || bN * bN + cN * cN == aN * aN) ? !!(r.innerHTML += r2) : true;
-    return (aN * aN + bN * bN - cN * cN < e || aN * aN + cN * cN - bN * bN < e || bN * bN + cN * cN - aN * aN < e) ? !!(r.innerHTML += r2) : true;
+    return (Math.abs(aN * aN + bN * bN - cN * cN) <= e || Math.abs(aN * aN + cN * cN - bN * bN) <= e || Math.abs(bN * bN + cN * cN - aN * aN) <= e) ? !!(r.innerHTML += r2) : true;  // true because we need to continue calculations
 }
 
 function defineIsoscelesTriangle() {
