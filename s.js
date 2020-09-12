@@ -12,8 +12,9 @@ let a = document.querySelector("#a"),
   w1 = "Введенное значение не является числом!",
   w2 = "Отрицательной длины быть не может!",
   w3 = "Без длины нет стороны!",
-  r1 = "Треугольник равносторонний",
-  r2 = 'Треугольник прямоугольный',
+  r1 = " Треугольник равносторонний",
+  r2 = ' Треугольник прямоугольный',
+  r3 = ' Треугольник равнобедренный',
   rS = 'По этим сторонам треугольник существует!',
   rU = 'Такого треугольника не существует!',
   e = 1e-5;
@@ -23,7 +24,7 @@ document.querySelector(".def").addEventListener("click", def);
 function def() {
   r.innerHTML = '';
   // checkNum() && defineEquilateralTriangle() && defineRightTriangle();
-  checkNum() && defineCorrectnessTriangle();
+  checkNum() && defineCorrectnessTriangle() && defineEquilateralTriangle() && defineRightTriangle() && defineIsoscelesTriangle();
 }
 
 function checkNum() {
@@ -62,21 +63,30 @@ function defineEquilateralTriangle() {
   //   return false;
   // } 
   // return true;
-  return !(aN == bN && aN == cN && bN == cN && (r.innerHTML = r1));
+  return !(aN == bN && aN == cN && bN == cN && (r.innerHTML += r1));
 }
 
 function defineRightTriangle() {
   console.log('1');
-  if (aN * aN + bN * bN == cN * cN || aN * aN + cN * cN == bN * bN || bN * bN + cN * cN == aN * aN) {
-    r.innerHTML = r2;
+  // if (aN * aN + bN * bN == cN * cN || aN * aN + cN * cN == bN * bN || bN * bN + cN * cN == aN * aN) {
+  //   r.innerHTML = r2;
+  // }
+    // return (aN * aN + bN * bN == cN * cN || aN * aN + cN * cN == bN * bN || bN * bN + cN * cN == aN * aN) ? !!(r.innerHTML += r2) : true;
+    return (aN * aN + bN * bN - cN * cN < e || aN * aN + cN * cN - bN * bN < e || bN * bN + cN * cN - aN * aN < e) ? !!(r.innerHTML += r2) : true;
+}
+
+function defineIsoscelesTriangle() {
+  if (aN == bN && aN != cN || aN == cN && aN !=bN || bN == cN && bN != aN) {
+    r.innerHTML += r3;
   }
 }
 
 function defineCorrectnessTriangle() {
-  if (aN + bN > cN || aN + cN > bN || bN + cN > aN) {
-    r.innerHTML = rS;
-  } else {
-    r.innerHTML = rU;
-  }
+  // if (aN + bN > cN && aN + cN > bN && bN + cN > aN) {
+  //   r.innerHTML = rS; return true;
+  // } else {
+  //   r.innerHTML = rU; return false;
+  // }
+  return (aN + bN > cN && aN + cN > bN && bN + cN > aN) ? !!(r.innerHTML = rS) : !(r.innerHTML = rU);
 }
 
