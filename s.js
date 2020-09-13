@@ -1,25 +1,25 @@
-let a = document.querySelector("#a"),
-  b = document.querySelector("#b"),
-  c = document.querySelector("#c"),
-  x = document.querySelector(".x"),
-  y = document.querySelector(".y"),
-  z = document.querySelector(".z"),
-  r = document.querySelector(".r"),
+let a = document.querySelector('#a'),
+  b = document.querySelector('#b'),
+  c = document.querySelector('#c'),
+  x = document.querySelector('.x'),
+  y = document.querySelector('.y'),
+  z = document.querySelector('.z'),
+  r = document.querySelector('.r'),
   aN,
   bN,
   cN,
-  wA = (wB = wC = ""),
-  w1 = "Введенное значение не является числом!",
-  w2 = "Отрицательной длины быть не может!",
-  w3 = "Без длины нет стороны!",
-  r1 = " Треугольник равносторонний",
+  wA = (wB = wC = ''),
+  w1 = 'Введенное значение не является числом!',
+  w2 = 'Отрицательной длины быть не может!',
+  w3 = 'Без длины нет стороны!',
+  r1 = ' Треугольник равносторонний',
   r2 = ' Треугольник прямоугольный',
   r3 = ' Треугольник равнобедренный',
   rS = 'По этим сторонам треугольник существует!',
   rU = 'Такого треугольника не существует!',
   e = 1e-5;
 
-document.querySelector(".def").addEventListener("click", def);
+document.querySelector('.def').addEventListener('click', def);
 
 function def() {
   r.innerHTML = '';
@@ -29,11 +29,10 @@ function def() {
 
 function checkNum() {
   let f1, f2, f3;
-  wA = wB = wC = "";
+  wA = wB = wC = '';
   aN = parseFloat(a.value);
   bN = parseFloat(b.value);
   cN = parseFloat(c.value);
-  // console.log(aN);
   f1 =
     !(
       (isNaN(aN) && (wA = w1)) ||
