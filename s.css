@@ -1,6 +1,31 @@
 .wrapper {
   margin: 0 auto;
   width: 320px;
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.d {
+  padding: 15px;
+}
+
+.p {
+  text-indent: 15px;
+  text-align: justify;
+}
+
+.s__i {
+  text-align: center;
+}
+
+.s,.def {
+  /* position: relative;
+left: 50%;
+transform: translate(-50%, 0); 
+ */
+ display: block;
+ margin: auto;
 }
 
 .s__w {
